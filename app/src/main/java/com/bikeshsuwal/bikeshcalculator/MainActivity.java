@@ -3,6 +3,7 @@ package com.bikeshsuwal.bikeshcalculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -116,19 +117,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Arthamatic arthamatic = new Arthamatic(first, second);
                     if (Add) {
                         result = arthamatic.Add();
-                        etView.setText(result);
+                        etView.setText(Integer.toString(result));
                         Add = false;
                     } else if (Subtract) {
                         result = arthamatic.Subtract();
-                        etView.setText(result);
+                        etView.setText(Integer.toString(result));
                         Subtract = false;
                     } else if (Divide) {
                         result = arthamatic.Divide();
-                        etView.setText(result);
+                        etView.setText(Integer.toString(result));
                         Divide = false;
                     } else if (Multiple) {
                         result = arthamatic.Multiple();
-                        etView.setText(result);
+                        etView.setText(Integer.toString(result));
                         Multiple = false;
                     }
                 }
